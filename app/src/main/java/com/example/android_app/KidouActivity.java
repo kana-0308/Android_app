@@ -24,11 +24,11 @@ public class KidouActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(KidouActivity.this,MainActivity.class); //HomeActivityに移動させる
+                Intent intent = new Intent(KidouActivity.this,HomeActivity.class); //HomeActivityに移動させる
                 startActivity(intent);
 
                 finish();//完全終了。Androidの戻るボタンでの動作防止
             }
-        }, 2000);
+        }, 2000);//2000ms表示
     }
 }
