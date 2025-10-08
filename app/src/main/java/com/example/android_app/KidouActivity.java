@@ -29,6 +29,6 @@ public class KidouActivity extends AppCompatActivity {
 
                 finish();//完全終了。Androidの戻るボタンでの動作防止
             }
-        }, 2000);//2000ms表示
+        }, 1000);//1000ms表示
     }
 }
