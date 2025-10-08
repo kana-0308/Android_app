@@ -1,4 +1,6 @@
 package com.example.android_app;
+//aaaaaaaaaaaaaaa
+//oresannjou
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
