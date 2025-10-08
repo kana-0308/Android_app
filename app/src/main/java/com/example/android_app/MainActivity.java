@@ -1,77 +1,54 @@
 package com.example.android_app;
 
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.android_app.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
-
+/**
+ * このアクティビティは、ゲームの単純なスタート画面として機能します😊。
+ * 最小限の機能だけを残しています！✨
+ */
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    // ViewBindingやナビゲーション関連の変数は不要になったため削除しました。
+    // private AppBarConfiguration appBarConfiguration;
+    // private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        // レイアウトを直接設定します。
+        // activity_main.xmlは、ゲームのスタート画面のレイアウト（例えば、
+        // 中央に「スタート」ボタンがあるなど）として使用されることを想定しています。
+        // ※このコードだけではレイアウトファイル自体は変更されません！
+        setContentView(R.layout.activity_main); // 変更点1️⃣: レイアウト設定をシンプルに！
 
-        setSupportActionBar(binding.toolbar);
+        // ツールバー、FloatingActionButton (fab)、ナビゲーション関連の
+        // 設定コードはすべて削除しました！🧹
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        // もしスタートボタンなどがあれば、ここでリスナーを設定できますが、
+        // 今回は「単純なスタート画面だけ」なので何も追加しません😉。
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        // 例：
+        /*
+        Button startButton = findViewById(R.id.startButton);
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                // ここに次のゲーム画面への遷移コードなどを書く！
             }
         });
+        */
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    // ツールバーのメニュー関連のメソッドは削除しました！
+    // @Override
+    // public boolean onCreateOptionsMenu(Menu menu) { ... }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    // @Override
+    // public boolean onOptionsItemSelected(MenuItem item) { ... }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
+    // ナビゲーション関連のメソッドは削除しました！
+    // @Override
+    // public boolean onSupportNavigateUp() { ... }
 }
