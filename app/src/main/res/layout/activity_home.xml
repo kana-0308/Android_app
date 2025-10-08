@@ -4,21 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#81C784"
+    android:background="#FFFFFF"
     android:padding="16dp"
     tools:context=".MainActivity">
 
     <!-- ゲームのタイトル -->
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/game_logo"
+        android:layout_marginTop="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
     <TextView
         android:id="@+id/gameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="すごいゲーム"
-        android:textSize="48sp"
+        android:layout_marginTop="220dp"
+        android:text="ポケットファーム"
+        android:textSize="45sp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
+        android:textColor="#b5d649"
         android:shadowColor="#455A64"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -67,6 +75,7 @@
         android:text="Version 1.0.0"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
+
 
 
 </RelativeLayout>
